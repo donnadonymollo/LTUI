@@ -1,0 +1,22 @@
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+
+Pods/
+Podfile.lock
+*.Podfile.lock
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+Logs/
+### macOS ###
+# General
+*.xcworkspace
+*.DS_Store
+.DS_Store
+*/.DS_Store
