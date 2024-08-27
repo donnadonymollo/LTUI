@@ -38,6 +38,10 @@ extension URLSession {
         completionDataTask: @escaping (DataTaskResult) -> Void,
         completionHeadersTask: @escaping ([String: Any]) -> Void
     ) -> URLSessionDataTask {
+        var request = request
+        if request.httpMethod == "GET" {
+            request.httpBody = nil
+        }
         let dataTask = self.dataTask(with: request) { [weak self] (data, response, error) in
             guard let self else { return }
             completionHeadersTask(self.getResponseHeaders(from: response))
