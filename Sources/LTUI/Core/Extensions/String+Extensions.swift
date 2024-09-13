@@ -10,6 +10,14 @@ import UIKit
 
 public extension String {
     
+    func attributedMessage() -> NSAttributedString {
+        .init(
+            string: self,
+            font: LTFont.montserratRegular.withSize(14),
+            color: .LT_black_pearl
+        )
+    }
+    
     /**
      Verifica si una cadena de caracteres solo contiene dígitos numéricos.
      - Returns: true si la cadena de caracteres solo contiene dígitos numéricos, false en caso contrario.

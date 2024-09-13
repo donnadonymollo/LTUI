@@ -39,7 +39,7 @@ extension URLSession {
         completionHeadersTask: @escaping ([String: Any]) -> Void
     ) -> URLSessionDataTask {
         var request = request
-        if request.httpMethod == "GET" {
+        if request.httpMethod == HTTPMethod.get.rawValue {
             request.httpBody = nil
         }
         let dataTask = self.dataTask(with: request) { [weak self] (data, response, error) in
