@@ -20,5 +20,6 @@ public enum HeaderKey: String {
     case userAgent = "User-Agent"
     case deviceId
     case ssoToken
+    case mySecretKey = "mysecretkey"
     
 }
