@@ -21,5 +21,6 @@ public enum HeaderKey: String {
     case deviceId
     case ssoToken
     case keyPass = "sqssKeyPass"
+    case ocpApimSubscriptionKey = "Ocp-Apim-Subscription-Key"
     
 }
