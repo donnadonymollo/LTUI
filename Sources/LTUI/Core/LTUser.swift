@@ -29,6 +29,9 @@ public struct LTUser: Codable {
     public var faculty: String?
     public var typeDescription: String?
     public var enableCachimbo: Bool?
+    public var course: String?
+    public var photo: String?
+    public var status: String?
     
     // MARK: - Lifecycle
     
@@ -51,6 +54,9 @@ public struct LTUser: Codable {
         faculty = nil
         typeDescription = nil
         enableCachimbo = nil
+        course = nil
+        photo = nil
+        status = nil
     }
     
 }
