@@ -34,6 +34,7 @@ public struct LTUser: Codable {
     public var status: String?
     public var roleId: String?
     public var levelDescription: String?
+    public var periodCode: String?
     
     // MARK: - Lifecycle
     
@@ -61,6 +62,59 @@ public struct LTUser: Codable {
         status = nil
         roleId = nil
         levelDescription = nil
+        periodCode = nil
+    }
+    
+    public init(
+        userCodeEncoded: String? = nil,
+        uniqueCode: String? = nil,
+        fullName: String? = nil,
+        codUser: String? = nil,
+        email: String? = nil,
+        local: String? = nil,
+        image: String? = nil,
+        career: String? = nil,
+        campus: String? = nil,
+        motherLastName: String? = nil,
+        fatherLastName: String? = nil,
+        isGea: Bool,
+        type: String? = nil,
+        modality: String? = nil,
+        cycle: String? = nil,
+        faculty: String? = nil,
+        typeDescription: String? = nil,
+        enableCachimbo: Bool? = nil,
+        course: String? = nil,
+        photo: String? = nil,
+        status: String? = nil,
+        roleId: String? = nil,
+        levelDescription: String? = nil,
+        periodCode: String? = nil
+    ) {
+        self.userCodeEncoded = userCodeEncoded
+        self.uniqueCode = uniqueCode
+        self.fullName = fullName
+        self.codUser = codUser
+        self.email = email
+        self.local = local
+        self.image = image
+        self.career = career
+        self.campus = campus
+        self.motherLastName = motherLastName
+        self.fatherLastName = fatherLastName
+        self.isGea = isGea
+        self.type = type
+        self.modality = modality
+        self.cycle = cycle
+        self.faculty = faculty
+        self.typeDescription = typeDescription
+        self.enableCachimbo = enableCachimbo
+        self.course = course
+        self.photo = photo
+        self.status = status
+        self.roleId = roleId
+        self.levelDescription = levelDescription
+        self.periodCode = periodCode
     }
     
 }
