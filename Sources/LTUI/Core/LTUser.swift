@@ -36,6 +36,7 @@ public struct LTUser: Codable {
     public var levelDescription: String?
     public var periodCode: String?
     public var version: String?
+    public var enrollmentPeriod: String?
     
     // MARK: - Lifecycle
     
@@ -65,6 +66,7 @@ public struct LTUser: Codable {
         levelDescription = nil
         periodCode = nil
         version = nil
+        enrollmentPeriod = nil
     }
     
     public init(
@@ -92,7 +94,8 @@ public struct LTUser: Codable {
         roleId: String? = nil,
         levelDescription: String? = nil,
         periodCode: String? = nil,
-        version: String? = nil
+        version: String? = nil,
+        enrollmentPeriod: String? = nil
     ) {
         self.userCodeEncoded = userCodeEncoded
         self.uniqueCode = uniqueCode
@@ -119,6 +122,7 @@ public struct LTUser: Codable {
         self.levelDescription = levelDescription
         self.periodCode = periodCode
         self.version = version
+        self.enrollmentPeriod = enrollmentPeriod
     }
     
 }
