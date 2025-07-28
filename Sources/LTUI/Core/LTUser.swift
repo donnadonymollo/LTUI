@@ -33,6 +33,7 @@ public struct LTUser: Codable {
     public var photo: String?
     public var status: String?
     public var version: String?
+    public var periodCode: String?
     
     // MARK: - Lifecycle
     
@@ -59,6 +60,7 @@ public struct LTUser: Codable {
         photo = nil
         status = nil
         version = nil
+        periodCode = nil
     }
     
 }
