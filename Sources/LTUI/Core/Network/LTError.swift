@@ -20,7 +20,7 @@ public enum LTError: Error, Equatable {
         case .serverError(_, let message):
             return message
         case .connectionError:
-            return "Ocurrió un problema al conectarse con Interbank. Por favor, inténtalo nuevamente."
+            return "Ocurrió un problema al conectarse con el servidor. Por favor, inténtalo nuevamente."
         case .timeoutSession(_, let message):
             return message
         case .jarvisServerError(_, let message):
