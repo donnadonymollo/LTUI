@@ -19,6 +19,7 @@ public enum HeaderKey: String {
     case version
     case userAgent = "User-Agent"
     case deviceId
+    case platform = "plataforma"
     case ssoToken
     case keyPass = "sqssKeyPass"
     case ocpApimSubscriptionKey = "Ocp-Apim-Subscription-Key"
