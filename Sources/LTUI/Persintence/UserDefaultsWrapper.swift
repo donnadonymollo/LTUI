@@ -6,6 +6,24 @@
 //
 
 import Foundation
+
+// MARK: - OptionalProtocol
+
+/// Protocolo para detectar valores nil en tipos genericos
+protocol OptionalProtocol {
+    
+    var isNil: Bool { get }
+    
+}
+
+extension Optional: OptionalProtocol {
+   
+    var isNil: Bool {
+        return self == nil
+    }
+    
+}
+
 /**
  PropertyWrapper para simplificar la interacción con UserDefaults al almacenar y recuperar valores de diferentes tipos.
  */
@@ -37,7 +55,10 @@ public struct UserDefaultsWrapper<Value> {
                 return UserDefaultsManager.defaults.object(forKey: finalKey) as? Value ?? defaultValue }
         }
         set {
-            if let url = newValue as? URL {
+            // Si el valor es nil, eliminar la clave de UserDefaults
+            if let optional = newValue as? OptionalProtocol, optional.isNil {
+                UserDefaultsManager.defaults.removeObject(forKey: finalKey)
+            } else if let url = newValue as? URL {
                 UserDefaultsManager.defaults.set(url, forKey: finalKey)
             } else {
                 UserDefaultsManager.defaults.set(newValue, forKey: finalKey)
@@ -99,4 +120,3 @@ public extension UserDefaultsWrapper where Value == Bool {
     }
     
 }
-
