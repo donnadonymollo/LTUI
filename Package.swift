@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "LTUI",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(
