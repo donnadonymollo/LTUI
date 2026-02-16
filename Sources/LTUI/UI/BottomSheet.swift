@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct BottomSheet<Content:View>: View {
+public struct BottomSheet<Content:View>: View {
 
     // MARK: - Properties
 
@@ -34,7 +34,7 @@ struct BottomSheet<Content:View>: View {
 
     // MARK: - Body
 
-    var body: some View {
+    public var body: some View {
         ZStack(alignment: .bottomTrailing) {
             GeometryReader { _ in
                 EmptyView()
@@ -69,16 +69,16 @@ struct BottomSheet<Content:View>: View {
     }
 }
 
-struct RoundedCornersShape: Shape {
+public struct RoundedCornersShape: Shape {
 
     // MARK: - Properties
 
-    let corners: UIRectCorner
-    let radius: CGFloat
+    public let corners: UIRectCorner
+    public let radius: CGFloat
 
     // MARK: - Functions
 
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(
             roundedRect: rect,
             byRoundingCorners: corners,

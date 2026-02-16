@@ -8,17 +8,17 @@
 import Foundation
 import SwiftUI
 
-struct ModalBottomSheet<Content: View>: View {
+public struct ModalBottomSheet<Content: View>: View {
 
     // MARK: - Properties
 
     @Binding var state: BottomSheetState
-    let content: Content
-    let height: CGFloat
+    public let content: Content
+    public let height: CGFloat
 
     // MARK: - Lifecycle
 
-    init(
+    public init(
         state: Binding<BottomSheetState>,
         height: CGFloat = 535,
         @ViewBuilder content: () -> Content
@@ -28,7 +28,7 @@ struct ModalBottomSheet<Content: View>: View {
         self.content = content()
     }
 
-    var body: some View {
+    public var body: some View {
         BottomSheet(
             isShowing: $state.isShowing,
             height: self.height
