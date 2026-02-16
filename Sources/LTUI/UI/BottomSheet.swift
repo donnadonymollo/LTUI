@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-@available(iOS 14.0, *)
 struct BottomSheet<Content:View>: View {
 
     // MARK: - Properties
@@ -70,7 +69,6 @@ struct BottomSheet<Content:View>: View {
     }
 }
 
-@available(iOS 14.0, *)
 struct RoundedCornersShape: Shape {
 
     // MARK: - Properties

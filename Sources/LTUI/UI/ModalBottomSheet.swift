@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-@available(iOS 14.0, *)
 struct ModalBottomSheet<Content: View>: View {
 
     // MARK: - Properties
